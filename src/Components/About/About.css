@@ -31,11 +31,7 @@
     gap: 80px;
 
 }
-.about .sayed{
-    height: 800px;
-    border-bottom-left-radius:210px ;
-    border-bottom-right-radius: 210px;
-}
+
 .about-pera{
     display: flex;
     flex-direction: column;
@@ -67,20 +63,20 @@
     border-radius: 50px;
     background: linear-gradient(264deg, #DF8908 -5.09%, #8415FF 106.28%);
 }
-.about-achievment{
+.about-achievments{
     display: flex;
     width: 100%;
     justify-content: space-around;
     margin-bottom: 80px;
 }
-.about-achivment{
+.about-achievment{
     display: flex;
     flex-direction:column ;
     align-items: center;
     gap: 10px;
     transition: 0.5s;
 }
-.about-achivment h1{
+.about-achievment h1{
     font-size: 60px;
     font-weight: 700;
     background: linear-gradient(270deg, #DF8908 50.41%, #B415FF 90.25%);
@@ -88,7 +84,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color:transparent ;
 }
-.about-achivment p{
+.about-achievment p{
     font-size:22px;
     font-weight: 500;
 }
@@ -96,7 +92,7 @@
     transform: scale(1.05);
     transition: 0.3s;
 }
-.about-achivment:hover{
+.about-achievment:hover{
     transform: scale(1.12);
     transition: 0.5s;
 }
@@ -106,31 +102,25 @@
     border-bottom-right-radius: 210px;
     position: relative;
     overflow: hidden;
-
-    /* image clarity */
     filter: brightness(1.03) contrast(1.05);
-
-    /* subtle linear gradient overlay (not background, not border) */
     background: linear-gradient(135deg, rgba(238,9,121,0.25), rgba(142,45,226,0.25));
     -webkit-mask-image: url('../../assets/about.jpg');
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;
     -webkit-mask-position: center;
+    
 
     transition: transform 0.35s ease, filter 0.35s ease;
 }
-
-/* subtle hover effect */
 .about .sayed:hover {
     transform: translateY(-6px);
     filter: brightness(1.08) contrast(1.08);
 }
 
-/* mobile safe */
 @media (max-width: 768px) {
    .about .sayed {
         height: auto;
-        max-width: 300px; /* Mobile-e image size adjust */
+        max-width: 300px;
         border-bottom-left-radius: 150px;
         border-bottom-right-radius: 150px;
     }
@@ -165,17 +155,17 @@
     .about-skill hr{
         height: 6px;
     }
-    .about-achievment{
+    .about-achievments{
         justify-content: space-between;
     }
-    .about-achivment{
+    .about-achievment{
         gap: 10px;
     }
-    .about-achivment h1{
+    .about-achievment h1{
         font-size: 34px;
         font-weight: 700;
     }
-    .about-achivment p{
+    .about-achievment p{
         text-align: center;
         font-size: 16px;
     }
