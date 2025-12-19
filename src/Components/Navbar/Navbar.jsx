@@ -26,7 +26,7 @@ const Navbar = () => {
       <ul ref={menuRef} className="nav-menu">
         <img src={menu_close} alt="" className="nav-mob-close" onClick={closeMenu} />
         <li> <AnchorLink className='anchor-link' offset={50} href='#home'><p onClick={()=>{setMenu("home")}}> Home</p>{menu === "home"?<img src={underline}></img> : <></>}</AnchorLink> </li>
-        <li> <AnchorLink className='anchor-link' offset={50} href='#about'><p onClick={()=>{setMenu("about")}}>About Us</p> {menu === "about"?<img src={underline}></img> : <></>}</AnchorLink> </li>
+        <li> <AnchorLink className='anchor-link' offset={50} href='#about'><p onClick={()=>{setMenu("about")}}>About</p> {menu === "about"?<img src={underline}></img> : <></>}</AnchorLink> </li>
         <li> <AnchorLink className='anchor-link' offset={50} href='#service'><p onClick={()=>{setMenu("service")}}>Services</p>  {menu === "service"?<img src={underline}></img> : <></>}</AnchorLink> </li>
         <li> <AnchorLink className='anchor-link' offset={50} href='#work'><p onClick={()=>{setMenu("work")}}>Portfolio</p> {menu === "work"?<img src={underline}></img> : <></>}</AnchorLink> </li>
         <li> <AnchorLink className='anchor-link' offset={50} href='#contact'><p onClick={()=>{setMenu("contact")}}>Contact</p> {menu === "contact"?<img src={underline}></img> : <></>} </AnchorLink></li>
