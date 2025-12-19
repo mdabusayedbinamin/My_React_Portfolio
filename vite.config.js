@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/My_React_Portfolio/' 
-});
+  base: './', // এখানে অবশ্যই './' দিন যাতে এটি সঠিক রিলেটিভ পাথ খুঁজে পায়
+})
