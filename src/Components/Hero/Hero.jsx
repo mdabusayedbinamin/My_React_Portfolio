@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import './Hero.css';
-import profile_img from '../../assets/update_img.jpg';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { Typewriter } from 'react-simple-typewriter';
+import React, { useState, useEffect } from "react";
+import "./Hero.css";
+import profile_img from "../../assets/update_img.jpg";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   const [showServices, setShowServices] = useState(false);
@@ -13,52 +13,68 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hero " id="home">
-      <img src={profile_img} alt="profile" className="hero-img" />
+    <div className="hero" id="home">
+      <img
+        src={profile_img}
+        alt="profile"
+        className="hero-img"
+        data-aos="zoom-in"
+        data-aos-duration="1200"
+      />
 
-      <h1>
+      <h1 data-aos="fade-down" data-aos-delay="300">
         <Typewriter
           words={["I'm MD ABU SAYED,"]}
           loop={2}
           cursor
-          cursorStyle=""
+          cursorStyle="|"
           typeSpeed={120}
         />
       </h1>
-      {showServices && (
-        <h2>
-          <Typewriter
-            words={[
-              "Frontend Developer",
-              "UI/UX Design",
-              "Responsive Websites",
-              "React JS Development",
-              "Performance Optimization",
-            ]}
-            loop={50}
-            cursorStyle=""
-            typeSpeed={100}
-            deleteSpeed={50}
-            delaySpeed={1000}
-          />
-        </h2>
-      )}
 
-      <p>
-        I am MD ABU SAYED BIN AMIN,I have completed my React learning and am
-        now actively seeking opportunities as a Front-End Developer. I have
-        strong hands-on knowledge of HTML, CSS, Bootstrap, JavaScript, React,
-        and , which enables me to design and develop responsive, modern, and
-        userfriendly web applications. 
+      <div className="hero-typing-box">
+        {showServices && (
+          <h2 data-aos="fade-in">
+            <Typewriter
+              words={[
+                "Frontend Developer",
+                "UI/UX Design",
+                "Responsive Websites",
+                "React JS Development",
+                "Performance Optimization",
+              ]}
+              loop={50}
+              cursor
+              cursorStyle="_"
+              typeSpeed={80}
+              deleteSpeed={50}
+              delaySpeed={1500}
+            />
+          </h2>
+        )}
+      </div>
+
+      <p className="hero-description" data-aos="fade-up" data-aos-delay="600">
+        I am <b>MD ABU SAYED BIN AMIN</b>, a dedicated Front-End Developer. 
+        I specialize in building responsive, modern, and user-friendly web 
+        applications using <span>React, JavaScript, and UI/UX best practices.</span>
       </p>
 
       <div className="hero-action">
-        <div className="hero-connect">
+        <div className="hero-connect" data-aos="fade-right" data-aos-delay="900">
           <AnchorLink className="anchor-link" offset={50} href="#contact">
             Connect With Me
           </AnchorLink>
         </div>
-        <div className="hero-resume">My Resume</div>
+        <div className="hero-resume" data-aos="fade-left" data-aos-delay="900">
+          <a
+            href="MD-ABU-SAYED.pdf"
+            target="_blank"
+            download="MD_ABU_SAYED_Resume.pdf"
+          >
+            My Resume
+          </a>
+        </div>
       </div>
     </div>
   );

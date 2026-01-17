@@ -32,12 +32,28 @@
 
 }
 
-.about-pera{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 24px;
-    font-weight: 500;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Outfit:wght@300;400;600;700&display=swap');
+
+.about-pera p {
+    font-family: 'Outfit', sans-serif; 
+    font-size: 18px;
+    line-height: 1.8;
+    color: #d1d1d1;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+
+.about-pera b {
+    color: #da7c25;
+    font-weight: 700;
+}
+
+.highlight {
+    color: #ffffff;
+    font-weight: 600;
+    border-bottom: 2px solid #da7c25;
 }
 .about-skills{
     display: flex;
@@ -63,41 +79,9 @@
     border-radius: 50px;
     background: linear-gradient(264deg, #DF8908 -5.09%, #8415FF 106.28%);
 }
-.about-achievments{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    margin-bottom: 80px;
-}
-.about-achievment{
-    display: flex;
-    flex-direction:column ;
-    align-items: center;
-    gap: 10px;
-    transition: 0.5s;
-}
-.about-achievment h1{
-    font-size: 60px;
-    font-weight: 700;
-    background: linear-gradient(270deg, #DF8908 50.41%, #B415FF 90.25%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color:transparent ;
-}
-.about-achievment p{
-    font-size:22px;
-    font-weight: 500;
-}
-.about-skill:hover{
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-.about-achievment:hover{
-    transform: scale(1.12);
-    transition: 0.5s;
-}
+
 .about .sayed {
-    height: 800px;
+    height: 700px;
     border-bottom-left-radius: 210px;
     border-bottom-right-radius: 210px;
     position: relative;
@@ -117,6 +101,171 @@
     filter: brightness(1.08) contrast(1.08);
 }
 
+.about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.column-heading {
+    font-size: 24px;
+    color: #DA7C25;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.resume-item {
+    position: relative;
+    padding: 15px 0 15px 30px;
+    border-left: 2px solid #333; 
+    margin-bottom: 10px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border-radius: 0 15px 15px 0;
+}
+
+.dot {
+    position: absolute;
+    left: -7px;
+    top: 22px; 
+    width: 12px;
+    height: 12px;
+    background: #444;
+    border-radius: 50%;
+    border: 2px solid #0f0f13;
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+.resume-item:hover {
+    border-left-color: #B415FF;
+    background: rgba(180, 21, 255, 0.05); 
+    transform: translateX(10px);
+    padding-left: 35px;
+}
+.resume-item:hover .dot {
+    background: #B415FF;
+    transform: scale(1.4);
+    box-shadow: 0 0 15px #B415FF;
+}
+
+.resume-item:hover h3 {
+    color: #B415FF;
+    transition: 0.3s;
+}
+
+.date {
+    font-size: 12px;
+    color: #DA7C25;
+    background: rgba(218, 124, 37, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.resume-item:hover .date {
+    background: #DA7C25;
+    color: #fff;
+}
+
+.resume-info h3 {
+    font-size: 20px;
+    color: #fff;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.org {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.res-points {
+    padding-left: 18px;
+    color: #999;
+    font-size: 14px;
+    line-height: 1.7;
+    transition: 0.3s;
+}
+
+.resume-item:hover .res-points {
+    color: #d1d1d1;
+}
+
+.cert-section {
+    padding: 30px;
+    background: linear-gradient(145deg, #1a1a21, #0f0f13);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+}
+.cert-section:hover {
+    transform: translateY(-8px);
+    border-color: rgba(218, 124, 37, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 
+                0 0 20px rgba(218, 124, 37, 0.1);
+}
+
+.cert-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(218, 124, 37, 0.05) 0%, transparent 70%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.cert-section:hover::before {
+    opacity: 1;
+}
+
+.cert-item p {
+    color: #e0e0e0;
+    margin-bottom: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s;
+}
+.cert-item p:hover {
+    color: #da7c25;
+    transform: translateX(5px);
+}
+.cert-item p i {
+    color: #da7c25;
+    font-size: 18px;
+    filter: drop-shadow(0 0 5px rgba(218, 124, 37, 0.4));
+}
+
+@media (max-width: 1024px) {
+    .resume-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .resume-item:hover {
+        transform: translateX(5px);
+    }
+}
 @media (max-width: 768px) {
    .about .sayed {
         height: auto;
@@ -155,7 +304,7 @@
     .about-skill hr{
         height: 6px;
     }
-    .about-achievments{
+    /* .about-achievments{
         justify-content: space-between;
     }
     .about-achievment{
@@ -168,42 +317,113 @@
     .about-achievment p{
         text-align: center;
         font-size: 16px;
-    }
+    } */
 }
-@media (max-width: 480px) {
-    .about-skill {
-        flex-direction: column; 
-        align-items: flex-start;
-        gap: 5px;
-    }
-    .about-skill hr {
-        width: 100% !important;
-    }
-        .about-title h1{
-        font-size: 50px;
-        padding: 0;
-    }
-    .about-title img{
-        width: 130px;
-        right: -20px;
-    }
-}
-@media (max-width: 1200px) {
+
+
+@media (max-width: 1024px) {
     .about {
-        margin: 60px 5%;
+        margin: 80px 5%; 
     }
     .about-sections {
         gap: 40px;
     }
-    .about-title h1 {
-        font-size: 40px;
-    }
-        .about-title h1{
-        font-size: 50px;
-        padding: 0;
-    }
-    .about-title img{
-        width: 130px;
-        right: -20px;
+    .resume-grid {
+        grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 768px) {
+    .about {
+        gap: 50px;
+        margin: 50px 20px;
+        align-items: center;
+    }
+
+    .about-title h1 {
+        font-size: 45px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .about-title img {
+        width: 100px;
+        right: -10px;
+    }
+
+    .about-sections {
+        flex-direction: column; 
+        align-items: center;
+        gap: 40px;
+    }
+
+    .about .sayed {
+        height: 450px; 
+        width: 100%;
+        max-width: 320px;
+        border-bottom-left-radius: 120px; 
+        border-bottom-right-radius: 120px;
+        transform: translateZ(0); 
+        will-change: transform, filter;
+    }
+
+    .about-right {
+        gap: 40px;
+        width: 100%;
+    }
+
+    .about-skill {
+        gap: 20px;
+    }
+
+    .about-skill p {
+        font-size: 18px;
+        min-width: 100px;
+    }
+
+    .resume-item:active, .resume-item:hover {
+        transform: translateX(5px);
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title h1 {
+        font-size: 35px;
+    }
+
+    .about-skill {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .about-skill hr {
+        width: 100% !important;
+    }
+
+    .about-pera p {
+        font-size: 16px;
+        text-align: left; 
+    }
+}
+
+/* অ্যানিমেশন স্মুথ করার গ্লোবাল রুল */
+@media (prefers-reduced-motion: no-preference) {
+    .about .sayed, .resume-item, .about-skill {
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+}
+/* .section-title h2 { font-size: 32px; font-weight: bold; color: #0563bb; text-align: center; margin-bottom: 20px; }
+.section-title p { text-align: center; margin-bottom: 40px; color: #777; }
+
+.skill-item { margin-bottom: 15px; }
+.skill-info { display: flex; justify-content: space-between; font-weight: 600; color: #45505b; margin-bottom: 8px; }
+.progress-bar-wrap { background: #f2f3f5; height: 10px; border-radius: 5px; overflow: hidden; }
+.progress-bar { background: #0563bb; height: 100%; transition: width 1.5s ease-in-out; border-radius: 5px; }
+.progress-bar { 
+    background: #0563bb; 
+    height: 100%; 
+    transition: width 2s ease-in-out; 
+    border-radius: 5px; 
+} */
+

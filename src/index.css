@@ -1,15 +1,30 @@
-*{
-  margin:  0;
-  padding: 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-  height:100vh ;
-background: linear-gradient(135deg, #1b242b 0%, #0f1a23 50%, #1b242b 100%);
-  color: white;
-  font-family: "Outfit", sans-serif;
+
+html {
+    scroll-behavior: smooth;
+    /* এখান থেকে overflow-x: hidden সরিয়ে দিন */
 }
-@keyframes gradientBG {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+
+body {
+    min-height: 100vh;
+    background-color: #161513; 
+    color: white;
+    font-family: "Outfit", sans-serif;
+    /* শুধুমাত্র বডিতে overflow-x hidden থাকবে যাতে স্লাইডার ডানে জায়গা না নেয় */
+    overflow-x: hidden; 
+}
+
+/* ব্যাকগ্রাউন্ড ফিক্সড রাখার জন্য */
+.background-wrapper, #tsparticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
 }
