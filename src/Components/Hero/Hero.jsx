@@ -68,7 +68,7 @@ const Hero = () => {
         </div>
         <div className="hero-resume" data-aos="fade-left" data-aos-delay="900">
           <a
-            href="MD-ABU-SAYED.pdf"
+            href="MD_ABU_SAYED Resume.pdf"
             target="_blank"
             download="MD_ABU_SAYED_Resume.pdf"
           >
