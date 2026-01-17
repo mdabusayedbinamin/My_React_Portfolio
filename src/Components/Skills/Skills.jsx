@@ -108,7 +108,7 @@ const Skills = () => {
             <div className="about-achievments" data-aos="fade-up" data-aos-offset="100">
         <div className="about-achievment">
           <h1>1.5+</h1>
-          <p>Years of Web Development Learning</p>
+          <p>Years of Web Development <br /> Learning</p>
         </div>
         <hr />
         <div className="about-achievment">

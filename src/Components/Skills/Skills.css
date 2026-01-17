@@ -14,17 +14,19 @@
 }
 
 .skills-title h1 {
-    font-size: 65px;
-    font-weight: 700;
-    color: #fff;
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+    background: linear-gradient(180deg, #9ca3af 0%, #f3f4f6 50%, #4b5563 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 .skills-title img {
-    position: absolute;
+     position: absolute;
     bottom: 0;
-    right: -20px;
+    right: 0;
     z-index: -1;
-    width: 150px;
 }
 
 
@@ -174,6 +176,8 @@
     font-weight: 500;
     color: #aaa;
     transition: 0.3s;
+    text-align: center;
+    justify-content: center;
 }
 
 .about-achievment:hover p {
