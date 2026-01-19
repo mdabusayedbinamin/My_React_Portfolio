@@ -17,14 +17,14 @@ const MyWork = () => {
             w_name: "Todo App-React",
             w_img: project1_img,
             w_desc: "Modern task management with real-time updates.",
-            w_link: "https://react-todo-app-sayed.netlify.app/"
+            w_link: "https://react-todobk.vercel.app/"
         },
         {
             w_no: 2,
             w_name: "Weather App-React",
             w_img: project2_img,
             w_desc: "Live weather tracking using OpenWeather API.",
-            w_link: "https://react-weather-app-sayed.netlify.app/"
+            w_link: "https://weatherbk.vercel.app/"
         },
         {
             w_no: 3,
